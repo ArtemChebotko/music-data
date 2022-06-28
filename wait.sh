@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-tar -xzvf music_data.tar.gz
-rm music_data.tar.gz
+tar -xzvf assets/usic_data.tar.gz
+rm assets/music_data.tar.gz
 wget https://downloads.datastax.com/dsbulk/dsbulk.tar.gz
 tar -xzvf dsbulk.tar.gz
 rm dsbulk.tar.gz
