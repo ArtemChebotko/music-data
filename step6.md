@@ -1,6 +1,6 @@
 <div class="top">
 
-# Design update U2
+# Design query Q2
 ### [◂](command:katapod.loadPage?step5){.steps} Step 6 of 13 [▸](command:katapod.loadPage?step7){.steps}
 </div>
 

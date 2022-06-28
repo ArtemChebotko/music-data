@@ -1,6 +1,6 @@
 <div class="top">
 
-# Design query Q1
+# Insert rows using the CQL shell
 ### [◂](command:katapod.loadPage?step3){.steps} Step 4 of 13 [▸](command:katapod.loadPage?step5){.steps}
 </div>
 
