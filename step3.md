@@ -6,10 +6,10 @@
 
 Load data into table `performers`:
 ```
-dsbulk load -url assets/performers.csv    \
-            -k music_data          \
-            -t performers          \
-            -header true           \
+dsbulk load -url assets/performers.csv  \
+            -k music_data               \
+            -t performers               \
+            -header true                \
             -logDir /tmp/logs
 ```
 
@@ -20,22 +20,22 @@ cqlsh -e "SELECT * FROM music_data.performers LIMIT 10;"
 
 Load data into tables `albums_by_performer`, `albums_by_title` and `albums_by_genre`:
 ```
-dsbulk load -url assets/albums.csv        \
-            -k music_data          \
-            -t albums_by_performer \
-            -header true           \
+dsbulk load -url assets/albums.csv      \
+            -k music_data               \
+            -t albums_by_performer      \
+            -header true                \
             -logDir /tmp/logs
             
-dsbulk load -url assets/albums.csv        \
-            -k music_data          \
-            -t albums_by_title     \
-            -header true           \
+dsbulk load -url assets/albums.csv      \
+            -k music_data               \
+            -t albums_by_title          \
+            -header true                \
             -logDir /tmp/logs     
             
-dsbulk load -url assets/albums.csv        \
-            -k music_data          \
-            -t albums_by_genre     \
-            -header true           \
+dsbulk load -url assets/albums.csv      \
+            -k music_data               \
+            -t albums_by_genre          \
+            -header true                \
             -logDir /tmp/logs                     
 ```
 
@@ -48,26 +48,26 @@ cqlsh -e "SELECT * FROM music_data.albums_by_genre LIMIT 5;"
 
 Load data into tables `tracks_by_title` and `tracks_by_album`:
 ```
-dsbulk load -url assets/tracks.csv        \
-            -k music_data          \
-            -t tracks_by_title     \
-            -header true           \
-            -m "0=album_title,     \
-                1=album_year,      \
-                2=genre,           \
-                3=number,          \
-                4=title"           \
+dsbulk load -url assets/tracks.csv      \
+            -k music_data               \
+            -t tracks_by_title          \
+            -header true                \
+            -m "0=album_title,          \
+                1=album_year,           \
+                2=genre,                \
+                3=number,               \
+                4=title"                \
             -logDir /tmp/logs
             
-dsbulk load -url assets/tracks.csv        \
-            -k music_data          \
-            -t tracks_by_album     \
-            -header true           \
-            -m "0=album_title,     \
-                1=album_year,      \
-                2=genre,           \
-                3=number,          \
-                4=title"           \
+dsbulk load -url assets/tracks.csv      \
+            -k music_data               \
+            -t tracks_by_album          \
+            -header true                \
+            -m "0=album_title,          \
+                1=album_year,           \
+                2=genre,                \
+                3=number,               \
+                4=title"                \
             -logDir /tmp/logs
 ```
 
