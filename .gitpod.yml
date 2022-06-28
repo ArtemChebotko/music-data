@@ -10,7 +10,7 @@ tasks:
       tar -xzf dsbulk.tar.gz
       rm dsbulk.tar.gz
       mv dsbulk* dsbulk
-      PATH=$PATH:/workspace/music-data/dsbulk/bin
+      PATH=$PATH:./dsbulk/bin
     command: | 
       docker run -p 9042:9042 -d \
                  --name Cassandra \
