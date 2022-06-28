@@ -2,7 +2,7 @@
 
 tar -xzf assets/music_data.tar.gz --directory assets/
 rm assets/music_data.tar.gz
-wget https://downloads.datastax.com/dsbulk/dsbulk.tar.gz
+wget -q https://downloads.datastax.com/dsbulk/dsbulk.tar.gz
 tar -xzf dsbulk.tar.gz
 rm dsbulk.tar.gz
 mv dsbulk* dsbulk
