@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+tar -xzvf music_data.tar.gz
+rm music_data.tar.gz
+wget https://downloads.datastax.com/dsbulk/dsbulk.tar.gz
+tar -xzvf dsbulk.tar.gz
+rm dsbulk.tar.gz
+mv dsbulk* dsbulk
+
 echo -n 'Waiting for Cassandra to start...'
 timeout 60 bash -c 'until cqlsh -e "describe cluster" >/dev/null 2>&1; do sleep 1; echo -n "."; done'
 echo ' Ready!'
